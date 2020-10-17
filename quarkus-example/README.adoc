@@ -1,0 +1,56 @@
+= MicroProfile GraphQL demo with Quarkus
+
+Generic information about this demo are provided in the parent README.
+
+This README focus on Quarkus.
+
+All commands are supposed to run in the project home directory.
+
+== JVM mode 
+
+To generate an executable JAR:
+[source]
+----
+mvn package 
+----
+
+This may take a while the first time to download all dependencies.
+
+The resulting file is optimized and contains only the bytecode and the libs that are really used.
+
+To run it:
+[source]
+----
+java -jar target/mpqldemo-runner.jar
+----
+As a reminder don't forget to run PostgreSQL before.
+
+When starting the application, the database is created and filled with some test data.
+
+== Native mode
+
+Quarkus native mode is based on https://github.com/oracle/graal[GraalVM]. See https://quarkus.io/guides/building-native-image[Building a native executable] to understand the principles.
+
+To generate a native executable:
+[source]
+----
+mvn package -Pnative
+----
+
+This is a complex process that takes a while (8 minutes on my MacBook). 
+
+The result is a binary executable based on https://github.com/oracle/graal/tree/master/substratevm[SubstrateVM] with a fast startup time and a low memory footprint.
+
+To run it:
+[source,]
+----
+target/mpqldemo-runner
+----
+
+If you want to change the project, see https://quarkus.io/guides/getting-started[Creating your first application].
+
+== Endpoints
+
+* http://localhost:8080/: index page
+* http://localhost:8080/swagger-ui/: SwaggerUI
+* http://localhost:8080/graphql-ui/: GraphiQL

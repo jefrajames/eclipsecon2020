@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    
+    <groupId>org.jefrajames.graphqldemo</groupId>
+    <artifactId>graphql-demo-parent</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+    
+    <name>MicroProfile GraphQL Demo</name>
+    
+    <description>Example application to demonstrate MicroProfile GraphQL</description>
+    
+    <licenses>
+        <license>
+            <name>Apache License, Version 2.0</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
+
+    <developers>
+        <developer>
+            <name>JF James</name>
+            <email>jefrajames@gmail.com</email>
+            <organizationUrl>http://jefrajames.fr</organizationUrl>
+        </developer>
+    </developers>
+    
+    <modules>
+        <module>liberty-example</module>
+        <module>quarkus-example</module>
+    </modules>
+    
+</project>

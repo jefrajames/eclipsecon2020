@@ -1,0 +1,43 @@
+<server>
+    <featureManager>
+        <feature>mpGraphQL-1.0</feature>
+        <feature>mpMetrics-2.3</feature>
+        <feature>jpa-2.2</feature>
+        <feature>jaxrs-2.1</feature>
+        <feature>mpOpenAPI-1.1</feature>
+    </featureManager>
+
+    <httpEndpoint id="defaultHttpEndpoint"
+                  httpPort="${httpPort}"
+                  httpsPort="${httpsPort}"/>
+    
+    <httpDispatcher enableWelcomePage="false" />
+    
+    <application location="mpqldemo.war" context-root="/" />
+    
+    <mpMetrics authentication="false"/>
+
+    <logging traceSpecification="org.jefrajames.graphqldemo.*=all:eclipselink.*=error" />
+  
+    <!-- Where is the JDBC driver -->
+    <library id="JDBCLib">
+        <file name="${shared.resource.dir}/postgresql-42.2.9.jar" />
+    </library>
+
+    <!-- Data Source definition -->
+    <dataSource id="personds" jndiName="jdbc/MerchantDS">
+        <jdbcDriver libraryRef="JDBCLib" />
+        <properties
+            URL="jdbc:postgresql://localhost:5432/easypay"
+            user="sa"
+            password="sapwd" />
+        <connectionManager maxPoolSize="8"
+                           minPoolSize="4" 
+                           connectionTimeout="60s" 
+                           maxIdleTime="3m" />·
+    </dataSource>
+    
+    <!-- See https://openliberty.io/blog/2020/08/28/graphql-apis-open-liberty-20009.html -->
+    <variable name="io.openliberty.enableGraphQLUI" value="true" />
+    
+</server>

@@ -1,0 +1,48 @@
+= MicroProfile GraphQL demo with Open Liberty
+
+Generic information about this demo are provided in the parent README.
+
+This README focus on Open Liberty.
+
+All commands are supposed to run in the project home directory.
+
+== Packaging an executable JAR 
+
+If you are not an Open Liberty user, the simplest approach is to package an executable JAR and run it.
+
+The following command generates a JAR file:
+[source,]
+----
+mvn package dependency:copy liberty:create liberty:install-feature liberty:deploy liberty:package -Dinclude=runnable
+----
+
+It may take a while when run for the first time to download all dependencies.
+
+The resulting file is a minimized JAR that contains only the required features to run the application.
+
+== Running the JAR
+From the project directory run:
+[source,]
+----
+java -jar target/mpqldemo.jar
+----
+As a reminder don't forget to run PostgreSQL before.
+
+When starting the application, the database is created and filled with some test data.
+
+There is a WARNING message at startup:
+[source,]
+----
+Could not load service class com.ibm.ws.io.smallrye.graphql.component.GraphQLExtension
+----
+but everything seems OK afterwards.
+
+Each time its is run, the JAR file is expended in ~/wlpExtract. Don't forget to clean this directory from time to time.
+
+If you want to change the project, see https://openliberty.io/guides/getting-started.html[Getting started with Open Liberty].
+
+== Endpoints
+
+* http://localhost:9080/: index page
+* http://localhost:9080/openapi/ui/: SwaggerUI
+* http://localhost:9080/graphql-ui: GraphiQL

@@ -1,0 +1,47 @@
+-- Load some test data
+
+-- Merchant 1
+insert into merchant 
+(id, brandname, businessactivity, contractstatus, joindate, city, country, number, street, scoreenabled, scoreid, servicelevel, website) 
+values 
+(1, 'Chez Marcel', 'RESTAURANT', 'ENABLED', '1979-12-12', 'New York City', 'USA', '5', 'Broadway', true, 'ms-1', 'PREMIUM', 'http://www.restaurantmarcel.fr/');
+
+-- Card Schemes for Merchant 1
+insert into merchant_cardschemes (merchant_id, cardschemes) values (1, 'AMEX');
+insert into merchant_cardschemes (merchant_id, cardschemes) values (1, 'VISA');
+insert into merchant_cardschemes (merchant_id, cardschemes) values (1, 'CB');
+insert into merchant_cardschemes (merchant_id, cardschemes) values (1, 'JCB');
+insert into merchant_cardschemes (merchant_id, cardschemes) values (1, 'UNIONPAY');
+
+-- Payment Channels for Merchant 1
+insert into merchant_paymentchannels (merchant_id, paymentchannels) values (1, 'IN_STORE');
+insert into merchant_paymentchannels (merchant_id, paymentchannels) values (1, 'ON_LINE');
+
+-- Contacts of Merchant 1
+insert INTO merchant_contacts (merchant_id, emailaddresses, name, phonenumbers)
+VALUES (1, 'marcel@gmail.com', 'Marcel Dupont', '12-34-56-78-90');
+insert INTO merchant_contacts (merchant_id, emailaddresses, name, phonenumbers)
+VALUES (1, 'mauricette@gmail.com', 'Mauricette Dupont', '12-56-78-90-34');
+
+
+-- Merchant 2
+insert into merchant 
+(id, brandname, businessactivity, contractstatus, joindate, city, country, number, street, scoreenabled, scoreid, servicelevel, website) 
+values 
+(2, 'Labbe Bookstore', 'BOOKSTORE', 'ENABLED', '2002-05-05', 'Blois', 'France', '2', 'rue Porte Chartraine', true, 'ms-2', 'STANDARD', 'https://librairie-labbe.business.site/');
+
+-- Card Schemes for Merchant 2
+insert into merchant_cardschemes (merchant_id, cardschemes) values (2, 'MASTERCARD');
+insert into merchant_cardschemes (merchant_id, cardschemes) values (2, 'VISA');
+insert into merchant_cardschemes (merchant_id, cardschemes) values (2, 'CB');
+
+-- Payment Channels for Merchant 2
+insert into merchant_paymentchannels (merchant_id, paymentchannels) values (2, 'IN_STORE');
+
+-- Contacts of Merchant 2
+insert INTO merchant_contacts (merchant_id, emailaddresses, name, phonenumbers)
+VALUES (2, 'labbe@laposte.net', 'Philippe Labbe', '34-56-78-90-12');
+insert INTO merchant_contacts (merchant_id, emailaddresses, name, phonenumbers)
+VALUES (2, 'gegelab@laposte.net', 'Gerard Labbe', '78-56-34-90-12');
+insert INTO merchant_contacts (merchant_id, emailaddresses, name, phonenumbers)
+VALUES (2, 'cathylab@laposte.net', 'Catherine Labbe', '34-78-56-90-12');

@@ -1,0 +1,112 @@
+[
+    [
+        {
+            "id": "d13ba7c4-6c7d-4661-ad6d-858a1731e8fd",
+            "name": "Revenue",
+            "value": 53
+        },
+        {
+            "id": "d2552177-1445-4f02-91a2-8865bb050610",
+            "name": "Acceptance",
+            "value": 19
+        },
+        {
+            "id": "90443d40-abbe-4040-83dc-5e08ec452e3f",
+            "name": "Fraud",
+            "value": 26
+        },
+        {
+            "id": "9ca4847c-2e77-43a1-9478-fa37d6b950d3",
+            "name": "Churn",
+            "value": 16
+        }
+    ],
+    [
+        {
+            "id": "81fbd922-094c-4e9f-8362-cbfcceb4b9df",
+            "name": "Revenue",
+            "value": 57
+        },
+        {
+            "id": "c90bcccd-f900-4c5b-84eb-f5d30bb28298",
+            "name": "Acceptance",
+            "value": 25
+        },
+        {
+            "id": "271c7683-abbf-4e14-a857-e7c3c8ff4ab0",
+            "name": "Fraud",
+            "value": 0
+        },
+        {
+            "id": "db1683e7-c358-4e4a-b200-42a9296160d8",
+            "name": "Churn",
+            "value": 61
+        }
+    ],
+    [ 
+        {
+            "id": "07b1ddf0-af06-41e5-858d-0c188fed230b",
+            "name": "Revenue",
+            "value": 48
+        },
+        {
+            "id": "acf3bf4f-cc22-4a12-b0b7-1eabd275af83",
+            "name": "Acceptance",
+            "value": 73
+        },
+        {
+            "id": "56405c21-04a4-4c22-b2bb-7e6466019ded",
+            "name": "Fraud",
+            "value": 62
+        },
+        {
+            "id": "3a4009e6-5513-4fe5-b391-9c8d34a67079",
+            "name": "Churn",
+            "value": 54
+        }
+    ],
+    [ 
+        {
+            "id": "6a3d949c-d4a5-4ad4-aac4-2847c0140a85",
+            "name": "Revenue",
+            "value": 42
+        },
+        {
+            "id": "51ac6824-e05c-492a-bd25-145bc67d9122",
+            "name": "Acceptance",
+            "value": 95
+        },
+        {
+            "id": "d5f3f78c-9104-48c7-9aa9-52a3eef0a896",
+            "name": "Fraud",
+            "value": 57
+        },
+        {
+            "id": "bde2d353-c513-4e60-9fe5-39a9636d282f",
+            "name": "Churn",
+            "value": 44
+        }
+    ],
+    [ 
+        {
+            "id": "10a85beb-8063-4efa-9b45-74aaf5dbbf4a",
+            "name": "Revenue",
+            "value": 15
+        },
+        {
+            "id": "9c12ba10-d231-4715-bda3-1f219caf46c0",
+            "name": "Acceptance",
+            "value": 94
+        },
+        {
+            "id": "64abc30b-21bd-4beb-860d-a5aba69798c8",
+            "name": "Fraud",
+            "value": 63
+        },
+        {
+            "id": "8472e4a2-c26a-4041-be37-e2c2af167862",
+            "name": "Churn",
+            "value": 22
+        }
+    ]
+]
